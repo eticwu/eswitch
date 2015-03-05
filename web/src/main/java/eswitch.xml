@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+    default-autowire="byName">
+
+    <!-- 开关引擎 -->
+    <bean id="switchEngine" class="com.kuaidadi.app.common.eswitch.item.DefaultSwitchEngine">
+        <property name="application" value="Example.App" />
+        <property name="server" ref="httpServer" />
+    </bean>
+
+    <!-- 阀值拦截器 -->
+    <bean id="thresholdInterceptor" class="com.kuaidadi.app.common.eswitch.threshold.ThresholdInterceptor" />
+
+    <!-- 切面 -->
+    <bean id="thresholdPointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+        <property name="patterns">
+            <list>
+                <value>com.kuaidadi.demo.web.service..*</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 通知服务 -->
+    <bean id="httpServer" class="com.kuaidadi.app.common.eswitch.server.DefaultActionServer" >
+    <property name="port" value="30000" />
+    </bean>
+
+    <!-- aop -->
+    <aop:config>
+        <aop:advisor advice-ref="thresholdInterceptor" pointcut-ref="thresholdPointcut" />
+    </aop:config>
+</beans>
