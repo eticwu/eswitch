@@ -32,7 +32,7 @@ import com.sun.net.httpserver.HttpServer;
  * 2、如果HTTP状态码为200，判断返回json内容中，success标记是否为true。<br/>
  * json格式为：{success:true|false,code:xxx,message:xxx}<br/>
  * 
- * @author stone
+ * @author chenke
  */
 public class DefaultActionServer implements HttpHandler {
 
