@@ -65,7 +65,7 @@ public interface Item {
     /**
      * 异常: 开关项没找到.
      * 
-     * @author <a href="mailto:li.jinl@alibaba-inc.com">Stone.J</a> 2013-7-10
+     * @author chenke
      */
     public static class ItemNotFoundException extends RuntimeException {
 
