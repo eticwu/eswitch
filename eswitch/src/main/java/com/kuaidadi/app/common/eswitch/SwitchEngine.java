@@ -36,7 +36,7 @@ import com.kuaidadi.app.common.eswitch.Item.ItemNotFoundException;
  * @see com.kuaidadi.app.common.eswitch.threshold.ThresholdInterceptor
  * </pre>
  * 
- * @author <a href="mailto:li.jinl@alibaba-inc.com">Stone.J</a> 2013-7-10
+ * @author chenke
  */
 public interface SwitchEngine {
 

@@ -23,7 +23,7 @@ import com.alibaba.fastjson.JSON;
  *      完全实现 -- 不依赖commons-collections
  * </pre>
  * 
- * @author <a href="mailto:li.jinl@alibaba-inc.com">Stone.J</a> 2013-7-11
+ * @author chenke
  */
 public class SwitchUtil {
 

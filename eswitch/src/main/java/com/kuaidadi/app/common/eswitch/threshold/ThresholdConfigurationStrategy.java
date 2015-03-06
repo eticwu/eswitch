@@ -28,7 +28,7 @@ public interface ThresholdConfigurationStrategy {
     /**
      * 阀值定义类
      * 
-     * @author <a href="mailto:li.jinl@alibaba-inc.com">Stone.J</a> 2013-9-25
+     * @author chenke
      */
     static class ThresholdDefinition {
 
