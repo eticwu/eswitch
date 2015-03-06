@@ -80,7 +80,7 @@ public interface Item {
     /**
      * 异常: Item操作异常.
      * 
-     * @author <a href="mailto:li.jinl@alibaba-inc.com">Stone.J</a> 2013-7-10
+     * @author chenke
      */
     public static class ItemOperateException extends RuntimeException {
 
